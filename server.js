@@ -28,7 +28,7 @@ var server = http.createServer(function (request, response) {
     response.write(`
 		<!DOCTYPE html>
 		<head>
-		<link rel="stylesheet" href="/x">
+		<link rel="stylesheet" href="/style.css">
 		</head>
 		<body>
 		<h1>标题</h1>
@@ -36,7 +36,7 @@ var server = http.createServer(function (request, response) {
 		</html>
 		`);
     response.end();
-  } else if (path === "/x") {
+  } else if (path === "/style.css") {
     response.statusCode = 200;
     response.setHeader("Content-Type", "text/css;charset=utf-8");
     response.write(`h1{color: red;}\n`);
